@@ -27,6 +27,7 @@ var cheerio = require('cheerio');
 var rest = require('restler');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
+var TEMP_HTMLFILE = "temp.html";
 
 var assertFileExists = function(infile) {
     var instr = infile.toString();
@@ -62,6 +63,10 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
+var processUrl = function(url) {
+    rest.get(url).on('complete', )    
+};
+
 if(require.main == module) {
     program
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists))
@@ -72,7 +77,7 @@ if(require.main == module) {
        var checkJson = checkHtmlFile(program.file, program.checks);
     }
     else {
-       var checkJson = checkHtmlFile(program.url, program.checks);
+       var checkJson = checkHtmlFile(processUrl(program.url), program.checks);
     }
     var outJson = JSON.stringify(checkJson, null, 4);
     console.log(outJson);
