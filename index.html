@@ -5,16 +5,35 @@
     <title>Bitstarter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0 "> 
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">  
     <style type="text/css">
+      /* For large desktops */   
+      @media (min-width: 980px) {
+        body {
+          padding-top: 60px;          
+        }
+      }   
+
+      /* For all form factors */          
       body {
-        padding-top: 20px;
-        padding-bottom: 40px;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
       }
-      .container {
-        width: 960px;
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        text-align: center;
       }
       p.lead {
-        padding-top: 15px;
+        padding-top: 1.5%;
+        font-size: 24px;
+        line-height: 30px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 24px;
       }
       .navigation, .pitch, .section1, .section1, .section2, .faq, .footer {
         padding: 10px 0px 10px 0px;
@@ -22,17 +41,7 @@
       .video, .thermometer, .order, .social {
         border: 1px dotted;
         text-align: center; 
-      }
-      .video {
-        /* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
-        height: 124px;
-        line-height: 124px;
-      }
-      .thermometer, .order, .social {
-        /* Line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
-        height: 40px;
-        line-height: 40px;
-      }
+      }           
       div.row {
         border: 1px solid;
       }
@@ -59,19 +68,21 @@
       </div>
     </div>
     <div class="container">
-      <div class="row heading">
+      <div class="row-fluid heading">
 	<div class="span12">
 	  <h1>Bitstarter Title</h1>
 	</div>  
       </div>
-      <div class="row subheading">
+      <div class="row-fluid subheading">
         <div class="span12">
 	  <p class="lead">This is a simple bitstarter project. </p> 
 	</div>  
       </div>	
-      <div class="row pitch">
+      <div class="row-fluid pitch">
 	<div class="span6 video">
 	  Video
+          <br/>  
+          <img class="img-polaroid" src="http://placehold.it/480x300"> 
 	</div> 
 	<div class="span6">
 	  <div class="thermometer">
@@ -85,22 +96,24 @@
 	  </div>
 	</div>
       </div>
-      <div class="row section1">
+      <div class="row-fluid section1">
 	<div class="span12">
-	  Marketing Secion 1
+          Marketing Section 1
+	  <p> Some text </p>
 	</div>  
       </div>
-      <div class="row section2">
+      <div class="row-fluid section2">
 	<div class="span12">
-	  Marketing Secion 2
+          Marketing Section 2            
+	  <p> Some more text </p>
 	</div>  
       </div>
-      <div class="row faq">
+      <div class="row-fluid faq">
 	<div class="span12">
 	  FAQ
 	</div>  
       </div>
-      <div class="row footer">
+      <div class="row-fluid footer">
 	<div class="span12">
 	  Footer
 	</div>  
